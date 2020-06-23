@@ -30,6 +30,8 @@ var originalFlavors = ["Banana Nut Fudge",
     "Vanilla",
     "Vanilla Burnt Almond"]
 
+    console.log(originalFlavors);
+
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
 (1) an array 
@@ -45,7 +47,7 @@ function is31Flavors(arrayProvided){
     if(arrayProvided.length === 31){
         trueLength = true;
     }
-    return trueLength;
+    console.log(trueLength);
 }
 is31Flavors(originalFlavors);
 
@@ -81,7 +83,7 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 function removeLastFlavor(givenArray){
     let only31Flavors = givenArray;
     givenArray.pop();
-    return only31Flavors;
+    console.log(only31Flavors);
 }
 removeLastFlavor(originalFlavors);
 
@@ -112,12 +114,13 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(givenArray, givenFlavor){
+    const index = givenArray.indexOf(givenFlavor);
+    flavorRemoved = givenArray;
+    givenArray.splice(index, 1);
+    console.log(flavorRemoved);
 }
-
+removeFlavorByName(originalFlavors, "Vanilla");
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -126,12 +129,15 @@ Your function should accept:
 2 arguments 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+var clones = [];
 
-function copy(/*code here*/){
-
-    /*code here*/
-
+function copy(newArray, oldArray){
+    newArray = [...oldArray];
+    let clone = newArray;
+    console.log(clone);
 }
+
+copy(clones, originalFlavors);
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -148,13 +154,15 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(givenArray, givenFlavor){
+    for(let i = 0; i < givenArray.length; i++){
+        if(givenArray[i].includes(givenFlavor) === true){
+            console.log(givenArray[i]);
+        };
+    };
+};
 
-    /*code here*/
-
-}
-
-
+filterByWord(originalFlavors, "Chocolate");
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
