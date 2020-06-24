@@ -159,13 +159,13 @@ function filterByWord(givenArray, givenFlavor){
     };
 };
 
-is31Flavors(originalFlavors);
-copy(clones, originalFlavors);
-addFlavor("Rainbow Sherbert", originalFlavors);
-removeLastFlavor(originalFlavors);
-getFlavorByIndex(originalFlavors, 2);
-removeFlavorByName(originalFlavors, "Vanilla");
-filterByWord(originalFlavors, "Chocolate");
+/* Task 1*/ is31Flavors(originalFlavors);
+/* Task 6*/ copy(clones, originalFlavors);
+/* Task 2*/ addFlavor("Rainbow Sherbert", originalFlavors);
+/* Task 3*/ removeLastFlavor(originalFlavors);
+/* Task 4*/ getFlavorByIndex(originalFlavors, 2);
+/* Task 5*/ removeFlavorByName(originalFlavors, "Vanilla");
+/* Task 7*/ filterByWord(originalFlavors, "Chocolate");
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
