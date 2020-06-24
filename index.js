@@ -30,8 +30,6 @@ var originalFlavors = ["Banana Nut Fudge",
     "Vanilla",
     "Vanilla Burnt Almond"]
 
-    console.log(originalFlavors);
-
 /* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
 (1) an array 
@@ -49,7 +47,7 @@ function is31Flavors(arrayProvided){
     }
     console.log(trueLength);
 }
-is31Flavors(originalFlavors);
+
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -67,7 +65,7 @@ function addFlavor(givenFlavor, givenArray){
     givenArray.unshift(givenFlavor);
     console.log(bonusFlavor);
 }
-addFlavor("Rainbow Sherbert", originalFlavors);
+
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -85,7 +83,7 @@ function removeLastFlavor(givenArray){
     givenArray.pop();
     console.log(only31Flavors);
 }
-removeLastFlavor(originalFlavors);
+
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -99,7 +97,7 @@ For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", a
 function getFlavorByIndex(givenArray, givenIndex){
     console.log(givenArray[givenIndex]);
 }
-getFlavorByIndex(originalFlavors, 2);
+
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -120,7 +118,7 @@ function removeFlavorByName(givenArray, givenFlavor){
     givenArray.splice(index, 1);
     console.log(flavorRemoved);
 }
-removeFlavorByName(originalFlavors, "Vanilla");
+
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -129,15 +127,14 @@ Your function should accept:
 2 arguments 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
-var clones = [];
 
 function copy(newArray, oldArray){
     newArray = [...oldArray];
     let clone = newArray;
     console.log(clone);
 }
+var clones = [];
 
-copy(clones, originalFlavors);
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -162,7 +159,14 @@ function filterByWord(givenArray, givenFlavor){
     };
 };
 
+is31Flavors(originalFlavors);
+copy(clones, originalFlavors);
+addFlavor("Rainbow Sherbert", originalFlavors);
+removeLastFlavor(originalFlavors);
+getFlavorByIndex(originalFlavors, 2);
+removeFlavorByName(originalFlavors, "Vanilla");
 filterByWord(originalFlavors, "Chocolate");
+
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
